@@ -226,6 +226,7 @@
       .road li.done { border-color: var(--green); }
       .road li.done .step { background: var(--green); color: #fff; }
       .road .done-tag { display: inline-block; vertical-align: 2px; margin-left: 8px; font-size: 11.5px; font-weight: 800; background: var(--green); color: #fff; border-radius: 999px; padding: 2px 9px; }
+      .road .wip-tag { display: inline-block; vertical-align: 2px; margin-left: 8px; font-size: 11.5px; font-weight: 800; background: var(--accent-soft); color: var(--accent-ink); border-radius: 999px; padding: 2px 9px; }
       .road .prio-tag {
         display: inline-block; vertical-align: 2px; margin-left: 8px;
         font-size: 11.5px; font-weight: 800; letter-spacing: 0.04em;
@@ -371,7 +372,8 @@
         statWip: L("製作中","In progress","制作中","제작 중","En curso","En cours","In Arbeit","Em andamento","В разработке","قيد الإنشاء","प्रगति पर","Dalam pengerjaan"),
         statPriv: L("非公開","Private","未公开","비공개","Privado","Privé","Privat","Privado","Приватно","خاص","निजी","Privat"),
         prio: L("最優先","TOP PRIORITY","最高优先级","최우선","PRIORIDAD MÁXIMA","PRIORITÉ MAX.","TOP-PRIORITÄT","PRIORIDADE MÁX.","ГЛАВНЫЙ ПРИОРИТЕТ","أولوية قصوى","सर्वोच्च प्राथमिकता","PRIORITAS UTAMA"),
-        done: L("完了","Done","完成","완료","Completado","Terminé","Fertig","Concluído","Готово","اكتمل","पूर्ण","Selesai")
+        done: L("完了","Done","完成","완료","Completado","Terminé","Fertig","Concluído","Готово","اكتمل","पूर्ण","Selesai"),
+        desg: L("設計中","In design","设计中","설계 중","En diseño","En conception","In Planung","Em projeto","В проектировании","قيد التصميم","डिज़ाइन चरण में","Tahap desain")
       };
 
       var CATS = {
@@ -645,6 +647,11 @@
         {
           title: L("Cosmos 側スキャナー","Cosmos-side scanner for QL1 + 42 Chain","QL1 + 42 Chain 的 Cosmos 侧扫描器","QL1 + 42 Chain용 Cosmos 측 스캐너","Escáner del lado Cosmos para QL1 + 42 Chain","Scanner côté Cosmos pour QL1 + 42 Chain","Cosmos-seitiger Scanner für QL1 + 42 Chain","Scanner do lado Cosmos para QL1 + 42 Chain","Сканер стороны Cosmos для QL1 + 42 Chain","ماسح جانب Cosmos لـ QL1 + 42 Chain","QL1 + 42 Chain के लिए Cosmos-साइड स्कैनर","Pemindai sisi Cosmos untuk QL1 + 42 Chain"),
           body: L("EVM 側だけでは見えない Cosmos 側の動きを追うスキャナー。こちらもウェブサイトとして作る。","A scanner for the Cosmos side that the EVM view cannot see — also built as a website.","用于追踪仅靠 EVM 视图看不到的 Cosmos 侧动态的扫描器，同样作为网站构建。","EVM 뷰만으로는 볼 수 없는 Cosmos 측의 움직임을 추적하는 스캐너. 이쪽도 웹사이트로 만듭니다.","Un escáner para el lado Cosmos que la vista EVM no puede ver, también construido como sitio web.","Un scanner pour le côté Cosmos que la vue EVM ne peut pas voir — également construit comme site web.","Ein Scanner für die Cosmos-Seite, die die EVM-Ansicht nicht sehen kann — ebenfalls als Website gebaut.","Um scanner para o lado Cosmos que a visão EVM não consegue ver — também construído como site.","Сканер для стороны Cosmos, которую не видит EVM-представление, — также создаётся как веб-сайт.","ماسح لجانب Cosmos الذي لا تستطيع رؤية EVM رؤيته — يُبنى أيضًا كموقع ويب.","Cosmos पक्ष के लिए स्कैनर जिसे EVM दृश्य नहीं देख सकता — यह भी वेबसाइट के रूप में बनाया गया।","Pemindai untuk sisi Cosmos yang tidak dapat dilihat oleh tampilan EVM — juga dibangun sebagai situs web.")
+        },
+        {
+          wip: true,
+          title: L("Guppy's Giveaway（仮）","Guppy's Giveaway (provisional)","Guppy's Giveaway（暂定名）","Guppy's Giveaway (가칭)","Guppy's Giveaway (provisional)","Guppy's Giveaway (provisoire)","Guppy's Giveaway (vorläufig)","Guppy's Giveaway (provisório)","Guppy's Giveaway (рабочее название)","Guppy's Giveaway (اسم مؤقت)","Guppy's Giveaway (अस्थायी नाम)","Guppy's Giveaway (nama sementara)"),
+          body: L("原資は運営のスターライト報酬（10日分）とCAT42請求手数料。Guideを引くと抽選券が貰えます。","Funded by the operator's own Starlight rewards (10 days' worth) plus CAT42 claim fees. Pulling a Guide earns you lottery tickets.","奖金来源是运营者自身的 Starlight 奖励（10 天份）加上 CAT42 索赔手续费。抽到 Guide 即可获得抽奖券。","재원은 운영자의 스타라이트 보상(10일분)과 CAT42 청구 수수료. Guide를 뽑으면 추첨권을 받을 수 있습니다.","Financiado con las recompensas Starlight del operador (10 días) y las comisiones de reclamación de CAT42. Al obtener un Guide recibes boletos.","Financé par les récompenses Starlight de l'opérateur (10 jours) et les frais de réclamation CAT42. Tirer un Guide donne des tickets.","Finanziert aus den Starlight-Belohnungen des Betreibers (10 Tage) plus CAT42-Claim-Gebühren. Wer einen Guide zieht, erhält Lose.","Financiado pelas recompensas Starlight do operador (10 dias) e pelas taxas de reivindicação da CAT42. Ao puxar um Guide você ganha bilhetes.","Фонд — собственные награды Starlight оператора (за 10 дней) плюс комиссии за клеймы CAT42. Вытянутый Guide даёт билеты.","التمويل من مكافآت Starlight الخاصة بالمشغّل (10 أيام) إضافة إلى رسوم مطالبة CAT42. سحب Guide يمنحك تذاكر.","फंडिंग ऑपरेटर के अपने Starlight रिवॉर्ड (10 दिनों के) और CAT42 क्लेम शुल्क से। Guide खींचने पर लॉटरी टिकट मिलते हैं।","Didanai dari hadiah Starlight milik operator sendiri (10 hari) ditambah biaya klaim CAT42. Menarik Guide memberi Anda tiket undian.")
         }
       ];
 
@@ -738,7 +745,7 @@
       function renderRoadmap() {
         document.getElementById("roadList").innerHTML = ROADMAP.map(function (r, i) {
           var cls = r.priority ? ' class="priority"' : (r.done ? ' class="done"' : "");
-          var tag = r.priority ? '<span class="prio-tag">' + t(I18N.prio) + "</span>" : (r.done ? '<span class="done-tag">' + t(I18N.done) + "</span>" : "");
+          var tag = r.priority ? '<span class="prio-tag">' + t(I18N.prio) + "</span>" : (r.done ? '<span class="done-tag">' + t(I18N.done) + "</span>" : (r.wip ? '<span class="wip-tag">' + t(I18N.desg) + "</span>" : ""));
           return "<li" + cls + "><span class=\"step\">" + (r.done ? "✓" : (i + 1)) + "</span><div><h3>" + t(r.title) + tag + "</h3><p>" + t(r.body) + "</p></div></li>";
         }).join("");
       }
