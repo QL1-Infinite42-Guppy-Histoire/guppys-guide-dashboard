@@ -6,6 +6,7 @@
     <meta name="color-scheme" content="light dark" />
     <link rel="icon" href="data:," />
     <title>Guppy's Guide ダッシュボード</title>
+    <meta property="og:image" content="https://ql1-infinite42-guppy-histoire.github.io/guppys-guide-dashboard/roadmap.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -112,6 +113,18 @@
         .hero-img { order: -1; min-height: 0; aspect-ratio: 3 / 2; }
         .hero-text { padding: 24px 22px 26px; }
       }
+      .roadmap-banner {
+        display: block; margin-top: 22px; border-radius: 18px; overflow: hidden;
+        border: 1.5px solid var(--line); text-decoration: none; background: #0a1126;
+      }
+      .roadmap-banner img { width: 100%; height: auto; display: block; }
+      .roadmap-banner-hint {
+        display: block; padding: 10px 16px; font-size: 14px; font-weight: 800;
+        color: var(--accent-ink); background: var(--surface); text-align: center;
+      }
+      .roadmap-banner:hover { border-color: var(--accent-ink); }
+      .roadmap-banner:focus-visible { outline: 3px solid var(--accent-ink); outline-offset: 3px; }
+      #roadmap { scroll-margin-top: 16px; }
       .toolbar {
         display: flex; align-items: center; justify-content: space-between;
         gap: 12px; flex-wrap: wrap; margin: 22px 0 6px;
@@ -256,6 +269,11 @@
         </div>
       </header>
 
+      <a class="roadmap-banner" href="#roadmap" aria-label="Roadmap details">
+        <img src="roadmap.png" alt="Guppy's Guide ロードマップ（2026年11月9日時点）: 1. CAW 関連を仕上げる（最優先） 2. QL1 トークン価格をアップデート（完了） 3. GuppyWallet を完成させる 4. バブルマップ（42 Chain・QL1） 5. Cosmos 側スキャナー" width="2400" height="1260" />
+        <span class="roadmap-banner-hint" data-i18n="roadBannerHint">タップでロードマップの詳細へ ↓</span>
+      </a>
+
       <div class="toolbar">
         <span class="asof" data-i18n="asof">2026年11月9日時点のスナップショット</span>
         <div class="lang-picker">
@@ -298,7 +316,7 @@
         <p class="empty-note" id="emptyNote" hidden data-i18n="emptyNote">このカテゴリの道具はまだありません。</p>
       </section>
 
-      <section aria-labelledby="road-h">
+      <section id="roadmap" aria-labelledby="road-h">
         <div class="sec-head">
           <h2 id="road-h" data-i18n="roadH">ロードマップ</h2>
           <span class="sec-note" data-i18n="roadNote">CAW 関連を最優先に更新 — 2026年11月9日</span>
@@ -343,6 +361,7 @@
         toolsNote: L("カテゴリで絞り込めます","Filter by category","可按类别筛选","카테고리로 필터링할 수 있습니다","Filtrar por categoría","Filtrer par catégorie","Nach Kategorie filtern","Filtrar por categoria","Фильтр по категориям","التصفية حسب الفئة","श्रेणी के अनुसार फ़िल्टर करें","Filter berdasarkan kategori"),
         emptyNote: L("このカテゴリの道具はまだありません。","No tools in this category yet.","此类别暂无工具。","이 카테고리에는 아직 도구가 없습니다.","Aún no hay herramientas en esta categoría.","Aucun outil dans cette catégorie pour le moment.","Noch keine Tools in dieser Kategorie.","Ainda não há ferramentas nesta categoria.","В этой категории пока нет инструментов.","لا توجد أدوات في هذه الفئة بعد.","इस श्रेणी में अभी कोई टूल नहीं है।","Belum ada alat dalam kategori ini."),
         roadH: L("ロードマップ","Roadmap","路线图","로드맵","Hoja de ruta","Feuille de route","Roadmap","Roteiro","Дорожная карта","خارطة الطريق","रोडमैप","Peta jalan"),
+        roadBannerHint: L("タップでロードマップの詳細へ ↓","Tap for the roadmap details ↓","点按查看路线图详情 ↓","탭하면 로드맵 상세로 ↓","Toca para ver el detalle ↓","Touchez pour le détail ↓","Tippen für die Details ↓","Toque para os detalhes ↓","Нажмите для подробностей ↓","انقر لتفاصيل خارطة الطريق ↓","विवरण के लिए टैप करें ↓","Ketuk untuk detail peta jalan ↓"),
         roadNote: L("CAW 関連を最優先に更新 — 2026年11月9日","Updated Nov 9, 2026 — CAW first","2026 年 11 月 9 日更新——CAW 优先","2026년 11월 9일 업데이트 — CAW 최우선","Actualizado el 9 de nov. de 2026: CAW primero","Mis à jour le 9 nov. 2026 — CAW en priorité","Aktualisiert am 9. Nov. 2026 — CAW zuerst","Atualizado em 9 de nov. de 2026 — CAW primeiro","Обновлено 9 ноября 2026 г. — сначала CAW","تم التحديث في 9 نوفمبر 2026 — CAW أولاً","9 नवंबर 2026 को अपडेट — CAW सबसे पहले","Diperbarui 9 Nov 2026 — CAW diutamakan"),
         factsH: L("チェーン早見表","Chain quick facts","链速览","체인 요약표","Datos rápidos de las cadenas","Infos rapides sur les chaînes","Chain-Kurzfakten","Fatos rápidos das redes","Краткие факты о сетях","حقائق سريعة عن السلاسل","चेन की त्वरित जानकारी","Fakta singkat chain"),
         footTag: L("42 Chain・QL1 のための道具箱","a hitchhiker's toolbox for 42 Chain & QL1","42 Chain 与 QL1 的旅行者工具箱","42 Chain과 QL1을 위한 히치하이커 도구상자","una caja de herramientas para 42 Chain y QL1","une boîte à outils pour 42 Chain et QL1","ein Werkzeugkasten für 42 Chain & QL1","uma caixa de ferramentas para 42 Chain e QL1","набор инструментов для 42 Chain и QL1","صندوق أدوات لـ 42 Chain وQL1","42 Chain और QL1 के लिए टूलबॉक्स","kotak peralatan untuk 42 Chain & QL1"),
