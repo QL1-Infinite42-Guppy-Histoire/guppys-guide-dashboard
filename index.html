@@ -6,7 +6,6 @@
     <meta name="color-scheme" content="light dark" />
     <link rel="icon" href="data:," />
     <title>Guppy's Guide ダッシュボード</title>
-    <meta property="og:image" content="https://ql1-infinite42-guppy-histoire.github.io/guppys-guide-dashboard/giveaway-roadmap.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -113,17 +112,6 @@
         .hero-img { order: -1; min-height: 0; aspect-ratio: 3 / 2; }
         .hero-text { padding: 24px 22px 26px; }
       }
-      .roadmap-banner {
-        display: block; margin-top: 22px; border-radius: 18px; overflow: hidden;
-        border: 1.5px solid var(--line); text-decoration: none; background: #0a1126;
-      }
-      .roadmap-banner img { width: 100%; height: auto; display: block; }
-      .roadmap-banner-hint {
-        display: block; padding: 10px 16px; font-size: 14px; font-weight: 800;
-        color: var(--accent-ink); background: var(--surface); text-align: center;
-      }
-      .roadmap-banner:hover { border-color: var(--accent-ink); }
-      .roadmap-banner:focus-visible { outline: 3px solid var(--accent-ink); outline-offset: 3px; }
       #roadmap { scroll-margin-top: 16px; }
       .toolbar {
         display: flex; align-items: center; justify-content: space-between;
@@ -270,10 +258,6 @@
         </div>
       </header>
 
-      <a class="roadmap-banner" href="https://ql1-infinite42-guppy-histoire.github.io/guppys-giveaway/" target="_blank" rel="noopener" aria-label="Guppy's Giveaway project roadmap">
-        <img src="giveaway-roadmap.png" alt="新規プロジェクト『Guppy's Giveaway』のロードマップ： 1 設計書の作成（完了） 2 Phase 0 実測（次はここ） 3 未決事項の決定 4 コントラクト作成 5 通し実証 6 応募サイトの公開 7 CAT42手数料の切替 8 初回ラウンド" width="2400" height="1690" />
-        <span class="roadmap-banner-hint" data-i18n="roadBannerHint">新規プロジェクト『Guppy's Giveaway』のロードマップへ →</span>
-      </a>
 
       <div class="toolbar">
         <span class="asof" data-i18n="asof">2026年11月9日時点のスナップショット</span>
@@ -362,7 +346,6 @@
         toolsNote: L("カテゴリで絞り込めます","Filter by category","可按类别筛选","카테고리로 필터링할 수 있습니다","Filtrar por categoría","Filtrer par catégorie","Nach Kategorie filtern","Filtrar por categoria","Фильтр по категориям","التصفية حسب الفئة","श्रेणी के अनुसार फ़िल्टर करें","Filter berdasarkan kategori"),
         emptyNote: L("このカテゴリの道具はまだありません。","No tools in this category yet.","此类别暂无工具。","이 카테고리에는 아직 도구가 없습니다.","Aún no hay herramientas en esta categoría.","Aucun outil dans cette catégorie pour le moment.","Noch keine Tools in dieser Kategorie.","Ainda não há ferramentas nesta categoria.","В этой категории пока нет инструментов.","لا توجد أدوات في هذه الفئة بعد.","इस श्रेणी में अभी कोई टूल नहीं है।","Belum ada alat dalam kategori ini."),
         roadH: L("ロードマップ","Roadmap","路线图","로드맵","Hoja de ruta","Feuille de route","Roadmap","Roteiro","Дорожная карта","خارطة الطريق","रोडमैप","Peta jalan"),
-        roadBannerHint: L("新規プロジェクト『Guppy's Giveaway』のロードマップへ →","See the new Guppy's Giveaway project roadmap →","查看新项目 Guppy's Giveaway 的路线图 →","신규 프로젝트 'Guppy's Giveaway' 로드맵으로 →","Ver la hoja de ruta del nuevo proyecto Guppy's Giveaway →","Voir la feuille de route du nouveau projet Guppy's Giveaway →","Zur Roadmap des neuen Projekts Guppy's Giveaway →","Ver o roteiro do novo projeto Guppy's Giveaway →","К дорожной карте нового проекта Guppy's Giveaway →","إلى خارطة طريق مشروع Guppy's Giveaway الجديد →","नए प्रोजेक्ट Guppy's Giveaway के रोडमैप पर →","Ke peta jalan proyek baru Guppy's Giveaway →"),
         roadNote: L("CAW 関連を最優先に更新 — 2026年11月9日","Updated Nov 9, 2026 — CAW first","2026 年 11 月 9 日更新——CAW 优先","2026년 11월 9일 업데이트 — CAW 최우선","Actualizado el 9 de nov. de 2026: CAW primero","Mis à jour le 9 nov. 2026 — CAW en priorité","Aktualisiert am 9. Nov. 2026 — CAW zuerst","Atualizado em 9 de nov. de 2026 — CAW primeiro","Обновлено 9 ноября 2026 г. — сначала CAW","تم التحديث في 9 نوفمبر 2026 — CAW أولاً","9 नवंबर 2026 को अपडेट — CAW सबसे पहले","Diperbarui 9 Nov 2026 — CAW diutamakan"),
         factsH: L("チェーン早見表","Chain quick facts","链速览","체인 요약표","Datos rápidos de las cadenas","Infos rapides sur les chaînes","Chain-Kurzfakten","Fatos rápidos das redes","Краткие факты о сетях","حقائق سريعة عن السلاسل","चेन की त्वरित जानकारी","Fakta singkat chain"),
         footTag: L("42 Chain・QL1 のための道具箱","a hitchhiker's toolbox for 42 Chain & QL1","42 Chain 与 QL1 的旅行者工具箱","42 Chain과 QL1을 위한 히치하이커 도구상자","una caja de herramientas para 42 Chain y QL1","une boîte à outils pour 42 Chain et QL1","ein Werkzeugkasten für 42 Chain & QL1","uma caixa de ferramentas para 42 Chain e QL1","набор инструментов для 42 Chain и QL1","صندوق أدوات لـ 42 Chain وQL1","42 Chain और QL1 के लिए टूलबॉक्स","kotak peralatan untuk 42 Chain & QL1"),
@@ -452,6 +435,16 @@
           links: [
             { k: "open", url: "https://ql1-infinite42-guppy-histoire.github.io/cat42-claim/" },
             { k: "github", url: "https://github.com/QL1-Infinite42-Guppy-Histoire/cat42-claim", repo: true }
+          ]
+        },
+        {
+          name: L("Guppy's Giveaway（仮）","Guppy's Giveaway (provisional)","Guppy's Giveaway（暂定名）","Guppy's Giveaway (가칭)","Guppy's Giveaway (provisional)","Guppy's Giveaway (provisoire)","Guppy's Giveaway (vorläufig)","Guppy's Giveaway (provisório)","Guppy's Giveaway (рабочее название)","Guppy's Giveaway (اسم مؤقت)","Guppy's Giveaway (अस्थायी नाम)","Guppy's Giveaway (nama sementara)"),
+          cat: "dex", status: "wip",
+          desc: L("運営自身のスターライト報酬を10日間蓄積して賞金プールにし、当選者へ配布する抽選プロジェクト。Guideを引くとティアに応じた抽選券が貰え、応募すると券は減る。現在は設計段階で、まずは運営の報酬が10日でいくら溜まるかの実測から始める。","A giveaway project that pools the operator's own Starlight rewards over 10 days and pays them out to winners. Pulling a Guide earns tickets by tier (Common 1 / Rare 2 / Epic 4 / Legendary 8), and entering spends them. Now in the design stage, starting with measuring the operator's 10-day accrual.","将运营者自身的 Starlight 奖励累积 10 天作为奖池并分发给中奖者的抽奖项目。抽到 Guide 可按等级获得抽奖券，报名时消耗。目前处于设计阶段，先从实测运营者 10 天的累积量开始。","운영자 본인의 스타라이트 보상을 10일간 모아 상금 풀로 만들고 당첨자에게 나눠 주는 추첨 프로젝트. Guide를 뽑으면 등급에 따라 추첨권을 받고, 응모하면 권이 줄어듭니다. 현재 설계 단계로, 운영자의 10일 누적량 실측부터 시작합니다.","Un proyecto de sorteo que acumula las recompensas Starlight del propio operador durante 10 días como premio y las reparte entre los ganadores. Al obtener un Guide recibes boletos según su nivel y al participar se consumen. Ahora en fase de diseño, empezando por medir la acumulación de 10 días del operador.","Un projet de tirage qui accumule les récompenses Starlight de l'opérateur pendant 10 jours comme cagnotte et les distribue aux gagnants. Tirer un Guide donne des tickets selon son niveau, et la participation les consomme. Actuellement en phase de conception, en commençant par mesurer l'accumulation sur 10 jours.","Ein Gewinnspiel-Projekt, das die Starlight-Belohnungen des Betreibers 10 Tage lang als Preispool sammelt und an Gewinner auszahlt. Wer einen Guide zieht, erhält Lose je nach Stufe; die Teilnahme verbraucht sie. Derzeit in der Entwurfsphase, beginnend mit der Messung der 10-tägigen Ansammlung.","Um projeto de sorteio que acumula as recompensas Starlight do próprio operador por 10 dias como prêmio e as distribui aos vencedores. Ao puxar um Guide você ganha bilhetes por nível, e participar os consome. Atualmente em fase de projeto, começando pela medição do acúmulo de 10 dias do operador.","Проект розыгрыша, который 10 дней накапливает собственные награды Starlight оператора в призовой фонд и распределяет их победителям. Вытянутый Guide даёт билеты по уровню, участие их расходует. Сейчас на стадии проектирования, начиная с замера 10-дневного накопления оператора.","مشروع سحب يجمع مكافآت Starlight الخاصة بالمشغّل لمدة 10 أيام كجائزة ويوزعها على الفائزين. سحب Guide يمنح تذاكر حسب المستوى، والمشاركة تستهلكها. حاليًا في مرحلة التصميم، بدءًا من قياس تراكم المشغّل خلال 10 أيام.","एक गिवअवे प्रोजेक्ट जो ऑपरेटर के अपने Starlight रिवॉर्ड को 10 दिनों तक जमा करके पुरस्कार बनाता है और विजेताओं को देता है। Guide खींचने पर स्तर के अनुसार टिकट मिलते हैं और भाग लेने पर वे खर्च होते हैं। अभी डिज़ाइन चरण में है, शुरुआत ऑपरेटर के 10 दिनों के संचय की माप से होगी।","Proyek undian yang mengumpulkan hadiah Starlight milik operator sendiri selama 10 hari sebagai hadiah dan membagikannya kepada pemenang. Menarik Guide memberi tiket sesuai tingkat, dan ikut serta menghabiskannya. Saat ini tahap desain, dimulai dengan mengukur akumulasi 10 hari operator."),
+          meta: [L("設計段階","Design stage","设计阶段","설계 단계","Fase de diseño","Phase de conception","Entwurfsphase","Fase de projeto","Стадия проектирования","مرحلة التصميم","डिज़ाइन चरण","Tahap desain"), L("賞金は運営のスターライト報酬","Funded by the operator's Starlight rewards","奖金来自运营者的 Starlight 奖励","상금은 운영자의 스타라이트 보상","Premio: recompensas Starlight del operador","Prix : récompenses Starlight de l'opérateur","Preis: Starlight-Belohnungen des Betreibers","Prêmio: recompensas Starlight do operador","Приз: награды Starlight оператора","الجائزة: مكافآت Starlight للمشغّل","पुरस्कार: ऑपरेटर के Starlight रिवॉर्ड","Hadiah: hadiah Starlight operator")],
+          links: [
+            { k: "open", url: "https://ql1-infinite42-guppy-histoire.github.io/guppys-giveaway/" },
+            { k: "github", url: "https://github.com/QL1-Infinite42-Guppy-Histoire/guppys-giveaway", repo: true }
           ]
         },
         {
