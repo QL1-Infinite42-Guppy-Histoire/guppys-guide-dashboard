@@ -158,6 +158,13 @@
       .checks .when { font-weight: 800; font-size: 13.5px; color: var(--accent-ink); white-space: nowrap; }
       .checks .what { font-weight: 700; }
       .checks .detail { grid-column: 2; color: var(--ink-soft); font-size: 14px; }
+      .checks-more-wrap { margin-top: 12px; text-align: center; }
+      .checks-more {
+        appearance: none; font: inherit; font-size: 14px; font-weight: 800; cursor: pointer;
+        border: 1.5px solid var(--line); background: var(--surface); color: var(--ink-soft);
+        border-radius: 999px; padding: 8px 24px;
+      }
+      .checks-more:hover { color: var(--ink); border-color: var(--ink); }
       @media (max-width: 560px) {
         .checks li { grid-template-columns: 1fr; }
         .checks .detail { grid-column: 1; }
@@ -291,6 +298,7 @@
           <span class="sec-note" data-i18n="checksNote">期限や確認待ちが近いもの</span>
         </div>
         <ul class="checks" id="checkList"></ul>
+        <div class="checks-more-wrap"><button type="button" class="checks-more" id="checkMore" data-i18n="checksMore">もっと見る</button></div>
       </section>
 
       <section aria-labelledby="tools-h">
@@ -344,6 +352,7 @@
         langNote: L("12言語対応：日本語 / English / 简体中文 / 한국어 / Español / Français / Deutsch / Português / Русский / العربية / हिन्दी / Bahasa Indonesia","Available in 12 languages: Japanese / English / Simplified Chinese / Korean / Spanish / French / German / Portuguese / Russian / Arabic / Hindi / Indonesian","支持 12 种语言：日语 / 英语 / 简体中文 / 韩语 / 西班牙语 / 法语 / 德语 / 葡萄牙语 / 俄语 / 阿拉伯语 / 印地语 / 印尼语","12개 언어 지원: 일본어 / 영어 / 중국어 간체 / 한국어 / 스페인어 / 프랑스어 / 독일어 / 포르투갈어 / 러시아어 / 아랍어 / 힌디어 / 인도네시아어","Disponible en 12 idiomas: japonés / inglés / chino simplificado / coreano / español / francés / alemán / portugués / ruso / árabe / hindi / indonesio","Disponible en 12 langues : japonais / anglais / chinois simplifié / coréen / espagnol / français / allemand / portugais / russe / arabe / hindi / indonésien","In 12 Sprachen verfügbar: Japanisch / Englisch / Vereinfachtes Chinesisch / Koreanisch / Spanisch / Französisch / Deutsch / Portugiesisch / Russisch / Arabisch / Hindi / Indonesisch","Disponível em 12 idiomas: japonês / inglês / chinês simplificado / coreano / espanhol / francês / alemão / português / russo / árabe / hindi / indonésio","Доступно на 12 языках: японский / английский / китайский (упрощ.) / корейский / испанский / французский / немецкий / португальский / русский / арабский / хинди / индонезийский","متاح بـ 12 لغة: اليابانية / الإنجليزية / الصينية المبسطة / الكورية / الإسبانية / الفرنسية / الألمانية / البرتغالية / الروسية / العربية / الهندية / الإندونيسية","12 भाषाओं में उपलब्ध: जापानी / अंग्रेज़ी / सरलीकृत चीनी / कोरियाई / स्पेनिश / फ्रेंच / जर्मन / पुर्तगाली / रूसी / अरबी / हिन्दी / इंडोनेशियाई","Tersedia dalam 12 bahasa: Jepang / Inggris / Mandarin Sederhana / Korea / Spanyol / Prancis / Jerman / Portugis / Rusia / Arab / Hindi / Indonesia"),
         checksH: L("直近のチェック","Upcoming checks","近期检查","다가오는 확인 사항","Próximas comprobaciones","Vérifications à venir","Anstehende Prüfungen","Verificações próximas","Ближайшие проверки","عمليات التحقق القادمة","आगामी जाँचें","Pemeriksaan mendatang"),
         checksNote: L("期限や確認待ちが近いもの","Deadlines and pending confirmations","临近的截止日期与待确认事项","마감이 가깝거나 확인 대기 중인 항목","Plazos y confirmaciones pendientes","Échéances et confirmations en attente","Fristen und ausstehende Bestätigungen","Prazos e confirmações pendentes","Сроки и ожидающие подтверждения","المواعيد النهائية والتأكيدات المعلقة","समय-सीमाएं और लंबित पुष्टियां","Batas waktu dan konfirmasi yang tertunda"),
+        checksMore: L("もっと見る","Show more","显示更多","더보기","Mostrar más","Afficher plus","Mehr anzeigen","Mostrar mais","Показать ещё","عرض المزيد","और दिखाएँ","Tampilkan lebih banyak"),
         toolsH: L("道具箱","The toolbox","工具箱","도구상자","Caja de herramientas","Boîte à outils","Werkzeugkasten","Caixa de ferramentas","Инструменты","صندوق الأدوات","टूलबॉक्स","Kotak peralatan"),
         toolsNote: L("カテゴリで絞り込めます","Filter by category","可按类别筛选","카테고리로 필터링할 수 있습니다","Filtrar por categoría","Filtrer par catégorie","Nach Kategorie filtern","Filtrar por categoria","Фильтр по категориям","التصفية حسب الفئة","श्रेणी के अनुसार फ़िल्टर करें","Filter berdasarkan kategori"),
         emptyNote: L("このカテゴリの道具はまだありません。","No tools in this category yet.","此类别暂无工具。","이 카테고리에는 아직 도구가 없습니다.","Aún no hay herramientas en esta categoría.","Aucun outil dans cette catégorie pour le moment.","Noch keine Tools in dieser Kategorie.","Ainda não há ferramentas nesta categoria.","В этой категории пока нет инструментов.","لا توجد أدوات في هذه الفئة بعد.","इस श्रेणी में अभी कोई टूल नहीं है।","Belum ada alat dalam kategori ini."),
@@ -814,6 +823,7 @@
 
       var lang = "ja";
       var activeCat = "all";
+      var checksShown = 3;
       function t(obj) {
         if (obj == null) return "";
         if (typeof obj === "string") {
@@ -838,9 +848,10 @@
         }).join("");
       }
       function renderChecks() {
-        document.getElementById("checkList").innerHTML = CHECKS.map(function (c) {
+        document.getElementById("checkList").innerHTML = CHECKS.slice(0, checksShown).map(function (c) {
           return "<li><span class=\"when\">" + t(c.when) + "</span><span class=\"what\">" + t(c.what) + "</span><span class=\"detail\">" + t(c.detail) + "</span></li>";
         }).join("");
+        document.getElementById("checkMore").hidden = checksShown >= CHECKS.length;
       }
       function renderChips() {
         var counts = { all: TOOLS.length };
@@ -911,6 +922,10 @@
         renderRoadmap();
         renderFacts();
       }
+      document.getElementById("checkMore").addEventListener("click", function () {
+        checksShown += 3;
+        renderChecks();
+      });
       document.getElementById("langSelect").addEventListener("change", function () {
         lang = this.value;
         if (LANGS.indexOf(lang) === -1) lang = "ja";
