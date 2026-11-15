@@ -242,6 +242,15 @@
       .fact-card dt { color: var(--ink-faint); font-weight: 700; white-space: nowrap; }
       .fact-card dd { margin: 0; font-weight: 700; overflow-wrap: anywhere; }
       .fact-card dd code { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: 12.5px; font-weight: 500; direction: ltr; unicode-bidi: embed; }
+      .nightmare-panel {
+        display: block; margin-top: 40px; background: #000; border-radius: 14px;
+        padding: 34px 24px; text-align: center; text-decoration: none;
+      }
+      .nightmare-panel span {
+        color: #c00020; font-size: clamp(19px, 3.4vw, 30px); font-weight: 800;
+        letter-spacing: 0.08em; line-height: 1.5;
+      }
+      .nightmare-panel:hover span { color: #e01430; }
       footer {
         margin-top: 48px; border-top: 1.5px solid var(--line); padding-top: 18px;
         color: var(--ink-faint); font-size: 13.5px; font-weight: 700;
@@ -327,6 +336,8 @@
         </div>
         <div class="facts" id="factCards"></div>
       </section>
+
+      <a class="nightmare-panel" dir="ltr" href="https://ql1-infinite42-guppy-histoire.github.io/caw-on-42/" target="_blank" rel="noopener"><span>IT DEPENDS ON THE COMMUNITY'S ACTIONS…</span></a>
 
       <footer>
         <span>Guppy's Guide — <span data-i18n="footTag">42 Chain・QL1 のための道具箱</span></span>
