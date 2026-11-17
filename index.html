@@ -1112,8 +1112,8 @@
         document.getElementById("checkMore").hidden = checksShown >= CHECKS.length;
       }
       function renderChips() {
-        var counts = { all: TOOLS.length };
-        TOOLS.forEach(function (x) { counts[x.cat] = (counts[x.cat] || 0) + 1; });
+        var counts = { all: 0 };
+        TOOLS.forEach(function (x) { if (x.status !== "stop") { counts[x.cat] = (counts[x.cat] || 0) + 1; counts.all++; } });
         counts.stopped = TOOLS.filter(function (x) { return x.status === "stop"; }).length;
         var html = Object.keys(CATS).map(function (key) {
           if (key !== "all" && !counts[key]) return "";
@@ -1132,7 +1132,7 @@
         }
       }
       function renderTools() {
-        var list = TOOLS.filter(function (x) { return activeCat === "all" || (activeCat === "stopped" ? x.status === "stop" : x.cat === activeCat); });
+        var list = TOOLS.filter(function (x) { if (activeCat === "stopped") return x.status === "stop"; if (x.status === "stop") return false; return activeCat === "all" || x.cat === activeCat; });
         var grid = document.getElementById("toolGrid");
         document.getElementById("emptyNote").hidden = list.length > 0;
         grid.innerHTML = list.map(function (tool) {
