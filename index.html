@@ -388,7 +388,8 @@
         bridge: L("ブリッジ","Bridge","跨链桥","브리지","Puente","Pont","Bridge","Ponte","Мост","الجسر","ब्रिज","Bridge"),
         explore: L("探検・調査","Explore & Research","探索与研究","탐색·조사","Explorar e investigar","Explorer et rechercher","Entdecken & Forschung","Explorar e pesquisar","Обзор и исследования","الاستكشاف والبحث","एक्सप्लोर और शोध","Jelajah & Riset"),
         social: L("SNS","Social","社交","소셜","Social","Social","Social","Social","Соцсети","اجتماعي","सोशल","Sosial"),
-        infra: L("入口・基盤","Hub & Infra","入口与基础设施","허브·인프라","Acceso e infraestructura","Accès et infra","Hub & Infra","Hub e infra","Хаб и инфраструктура","البوابة والبنية","हब और इंफ्रा","Hub & Infra")
+        infra: L("入口・基盤","Hub & Infra","入口与基础设施","허브·인프라","Acceso e infraestructura","Accès et infra","Hub & Infra","Hub e infra","Хаб и инфраструктура","البوابة والبنية","हब और इंफ्रा","Hub & Infra"),
+        stopped: L("中止","Discontinued","已中止","중단","Descontinuado","Arrêté","Eingestellt","Descontinuado","Прекращено","متوقف","बंद","Dihentikan")
       };
       var STATUS = {
         live: { txt: L("公開中","Live","已上线","공개 중","En línea","En ligne","Live","No ar","Работает","مباشر","लाइव","Aktif"), cls: "live" },
@@ -719,6 +720,11 @@
       ];
 
       var CHECKS = [
+        {
+          when: L("11月18日","Nov 18, 2026","11月18日","11월 18일","18 nov 2026","18 nov. 2026","18. Nov. 2026","18 nov. 2026","18 нояб. 2026","18 نوفمبر 2026","18 नवंबर 2026","18 Nov 2026"),
+          what: L("3つのサイトに独自ドメインを設定","Custom domains for three sites","三个站点启用自定义域名","3개 사이트에 커스텀 도메인 적용","Dominios personalizados para tres sitios","Domaines personnalisés pour trois sites","Eigene Domains für drei Sites","Domínios personalizados para três sites","Собственные домены для трёх сайтов","نطاقات مخصصة لثلاثة مواقع","तीन साइटों के लिए कस्टम डोमेन","Domain khusus untuk tiga situs"),
+          detail: L("42予備エクスプローラーは scan.id42.win、42ステーキングは staking.id42.win、CAT42請求は cat.id42.win になりました。旧URLからは自動で転送されます。あわせて id42.win 全体で HTTPS への強制を有効にしました。","The 42 Backup Explorer is now at scan.id42.win, 42 Staking at staking.id42.win, and CAT42 Claim at cat.id42.win. The old URLs redirect automatically. HTTPS is now forced across id42.win.","42 备用浏览器现为 scan.id42.win，42 质押为 staking.id42.win，CAT42 领取为 cat.id42.win。旧网址会自动跳转。同时 id42.win 全域已启用强制 HTTPS。","42 예비 탐색기는 scan.id42.win, 42 스테이킹은 staking.id42.win, CAT42 청구는 cat.id42.win이 되었습니다. 이전 URL에서는 자동으로 이동합니다. id42.win 전체에서 HTTPS 강제 적용을 켰습니다.","El explorador de respaldo de 42 ahora está en scan.id42.win, 42 Staking en staking.id42.win y CAT42 Claim en cat.id42.win. Las URL antiguas redirigen automáticamente. HTTPS ahora es forzado en todo id42.win.","L'explorateur de secours 42 est désormais sur scan.id42.win, 42 Staking sur staking.id42.win et CAT42 Claim sur cat.id42.win. Les anciennes URL redirigent automatiquement. HTTPS est désormais forcé sur tout id42.win.","Der 42-Backup-Explorer ist jetzt unter scan.id42.win, 42 Staking unter staking.id42.win und CAT42 Claim unter cat.id42.win erreichbar. Die alten URLs leiten automatisch weiter. HTTPS wird nun auf ganz id42.win erzwungen.","O explorador de backup da 42 agora está em scan.id42.win, o 42 Staking em staking.id42.win e o CAT42 Claim em cat.id42.win. Os URLs antigos redirecionam automaticamente. O HTTPS agora é forçado em todo o id42.win.","Резервный обозреватель 42 теперь на scan.id42.win, 42 Staking — на staking.id42.win, а CAT42 Claim — на cat.id42.win. Старые URL автоматически перенаправляют. Для всего id42.win включён принудительный HTTPS.","أصبح مستكشف 42 الاحتياطي على scan.id42.win، و42 Staking على staking.id42.win، وCAT42 Claim على cat.id42.win. عناوين URL القديمة تُعيد التوجيه تلقائيًا. وأصبح HTTPS مفروضًا على id42.win بالكامل.","42 बैकअप एक्सप्लोरर अब scan.id42.win पर, 42 Staking staking.id42.win पर और CAT42 Claim cat.id42.win पर है। पुराने URL अपने आप रीडायरेक्ट होते हैं। पूरे id42.win पर HTTPS अब अनिवार्य है।","Penjelajah cadangan 42 kini di scan.id42.win, 42 Staking di staking.id42.win, dan CAT42 Claim di cat.id42.win. URL lama dialihkan otomatis. HTTPS kini dipaksakan di seluruh id42.win.")
+        },
         {
           when: L("11月17日","Nov 17, 2026","11月17日","11월 17일","17 nov 2026","17 nov. 2026","17. Nov. 2026","17 nov. 2026","17 нояб. 2026","17 نوفمبر 2026","17 नवंबर 2026","17 Nov 2026"),
           what: L("DEX アグリゲーターはメンテナンス中","DEX Aggregator is under maintenance","DEX 聚合器正在维护","DEX 애그리게이터 점검 중","El agregador DEX está en mantenimiento","L'agrégateur DEX est en maintenance","DEX-Aggregator wird gewartet","O agregador DEX está em manutenção","DEX-агрегатор на техническом обслуживании","مجمّع DEX قيد الصيانة","DEX एग्रीगेटर रखरखाव में है","Agregator DEX sedang dalam pemeliharaan"),
@@ -1090,6 +1096,7 @@
       function renderChips() {
         var counts = { all: TOOLS.length };
         TOOLS.forEach(function (x) { counts[x.cat] = (counts[x.cat] || 0) + 1; });
+        counts.stopped = TOOLS.filter(function (x) { return x.status === "stop"; }).length;
         var html = Object.keys(CATS).map(function (key) {
           if (key !== "all" && !counts[key]) return "";
           var pressed = key === activeCat ? "true" : "false";
@@ -1107,7 +1114,7 @@
         }
       }
       function renderTools() {
-        var list = TOOLS.filter(function (x) { return activeCat === "all" || x.cat === activeCat; });
+        var list = TOOLS.filter(function (x) { return activeCat === "all" || (activeCat === "stopped" ? x.status === "stop" : x.cat === activeCat); });
         var grid = document.getElementById("toolGrid");
         document.getElementById("emptyNote").hidden = list.length > 0;
         grid.innerHTML = list.map(function (tool) {
